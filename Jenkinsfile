@@ -9,19 +9,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Gradle assembling project.."
-                sh 'gradle assemble'
+                sh './gradlew assemble'
             }
         }
         stage('Tests') {
             steps {
                 echo "Gradle executing tests.."
-                sh 'gradle check'
+                sh './gradlew check'
             }
         }
         stage('Mutation Tests') {
             steps {
                 echo "Gradle executing mutation tests.."
-                sh 'gradle pitest'
+                sh './gradle pitest'
             }
         }
     }
