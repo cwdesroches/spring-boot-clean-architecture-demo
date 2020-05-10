@@ -21,7 +21,7 @@ pipeline {
         stage('Mutation Tests') {
             steps {
                 echo "Gradle executing mutation tests.."
-                sh './gradle pitest'
+                sh './gradlew pitest'
             }
         }
     }
